@@ -9,6 +9,7 @@ from rest_framework import routers
 urlpatterns = [
     path('api/v1/women/', views.WomenAPIList.as_view()),
     path('api/v1/women/<int:pk>/', views.WomenAPIUpdate.as_view()),
+    path('api/v1/category/', views.CategoryAPIList.as_view()),
     path('api/v1/drf-auth/', include('rest_framework.urls')),
     # path('api/v1/', include(router.urls)),
     # path('api/v1/womenlist', views.WomenViewSet.as_view({'get': 'list'})),

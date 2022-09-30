@@ -4,7 +4,7 @@ from rest_framework import serializers
 from rest_framework.parsers import JSONParser
 from rest_framework.renderers import JSONRenderer
 
-from .models import Women
+from .models import Women, Category
 
 
 class WomenSerializer(serializers.ModelSerializer):
@@ -13,6 +13,11 @@ class WomenSerializer(serializers.ModelSerializer):
         model = Women
         fields = '__all__'
 
+
+class CategorySerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Category
+        fields = '__all__'
 
 # class WomenModel:
 #     def __init__(self, title, content):
